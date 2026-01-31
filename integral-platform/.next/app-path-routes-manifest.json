@@ -1,0 +1,18 @@
+{
+  "/(admin)/admin/analytics/page": "/admin/analytics",
+  "/(admin)/admin/blogs/new/page": "/admin/blogs/new",
+  "/(admin)/admin/blogs/page": "/admin/blogs",
+  "/(admin)/admin/content/[id]/page": "/admin/content/[id]",
+  "/(admin)/admin/content/new/page": "/admin/content/new",
+  "/(admin)/admin/content/page": "/admin/content",
+  "/(admin)/admin/dashboard/page": "/admin/dashboard",
+  "/(admin)/admin/leads/page": "/admin/leads",
+  "/(admin)/admin/portfolio/new/page": "/admin/portfolio/new",
+  "/(admin)/admin/portfolio/page": "/admin/portfolio",
+  "/(admin)/admin/settings/page": "/admin/settings",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/login/page": "/login",
+  "/page": "/"
+}

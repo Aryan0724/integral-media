@@ -2,8 +2,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // Shutter Reveal Animation
-window.addEventListener('load', () => {
-    const tl = gsap.timeline({ delay: 0.5 });
+// Make init function global so Next.js can call it
+window.initSiteAnimations = () => {
+    const tl = gsap.timeline({ delay: 0.1 });
 
     tl.to('.shutter-panel', {
         height: 0,
@@ -15,9 +16,16 @@ window.addEventListener('load', () => {
             display: 'none'
         })
         .add(() => {
-            revealHero(); // Trigger hero animation after shutters open
+            revealHero();
         }, "-=1");
-});
+};
+
+// Auto-run if not in a SPA transition (first load)
+if (document.readyState === 'complete') {
+    window.initSiteAnimations();
+} else {
+    window.addEventListener('load', window.initSiteAnimations);
+}
 
 // Hero Reveal function
 function revealHero() {

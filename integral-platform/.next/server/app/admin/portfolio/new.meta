@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(admin)/layout,_N_T_/(admin)/admin/layout,_N_T_/(admin)/admin/portfolio/layout,_N_T_/(admin)/admin/portfolio/new/layout,_N_T_/(admin)/admin/portfolio/new/page,_N_T_/admin/portfolio/new/"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/!KGFkbWluKQ/admin/portfolio/new/__PAGE__",
+    "/!KGFkbWluKQ/admin/portfolio/new",
+    "/!KGFkbWluKQ/admin/portfolio",
+    "/!KGFkbWluKQ/admin",
+    "/!KGFkbWluKQ",
+    "/_index",
+    "/_head"
+  ]
+}
