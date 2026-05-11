@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/integral%20media%20site/integral-platform/app/page.tsx"],"sourcesContent":["\nimport { redirect } from \"next/navigation\";\n\nexport default function Home() {\n  redirect(\"/index.html\");\n}\n"],"names":[],"mappings":";;;;AACA;AAAA;;AAEe,SAAS;IACtB,IAAA,iMAAQ,EAAC;AACX"}}]
-}
