@@ -23,7 +23,7 @@ export default function SettingsPage() {
             // unless we have a landing page for them.
             // We will just assume static pages + CMS pages.
 
-            const baseUrl = "https://integral.labs"; // Real domain should be config
+            const baseUrl = "https://integral.media"; // Real domain should be config
             const today = new Date().toISOString();
 
             let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -104,7 +104,7 @@ export default function SettingsPage() {
                             <label className="mb-2 block text-sm font-medium text-gray-700">Site Base URL</label>
                             <input
                                 type="text"
-                                defaultValue="https://integral.labs"
+                                defaultValue="https://integral.media"
                                 className="w-full rounded-lg border border-gray-300 p-2 text-sm outline-none focus:border-black focus:ring-1 focus:ring-black"
                             />
                         </div>

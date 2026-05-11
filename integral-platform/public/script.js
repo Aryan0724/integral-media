@@ -1,22 +1,9 @@
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
-// Shutter Reveal Animation
+// Page Reveal Animation
 window.addEventListener('load', () => {
-    const tl = gsap.timeline({ delay: 0.5 });
-
-    tl.to('.shutter-panel', {
-        height: 0,
-        duration: 1.5,
-        stagger: 0.1,
-        ease: "power4.inOut"
-    })
-        .to('.shutter-overlay', {
-            display: 'none'
-        })
-        .add(() => {
-            revealHero(); // Trigger hero animation after shutters open
-        }, "-=1");
+    revealHero();
 });
 
 // Hero Reveal function
@@ -24,23 +11,24 @@ function revealHero() {
     const tl = gsap.timeline();
 
     tl.from('.logo', {
-        y: -50,
+        y: -10,
         opacity: 0,
         duration: 1,
-        ease: "power3.out"
+        ease: "power2.out"
     })
         .from('.line', {
-            y: 100,
+            y: 30,
             opacity: 0,
-            duration: 1,
+            duration: 1.2,
             stagger: 0.1,
-            ease: "power4.out"
-        }, "-=0.5")
+            ease: "power3.out"
+        }, "-=0.8")
         .from('.hero-sub', {
             opacity: 0,
-            y: 20,
-            duration: 1
-        }, "-=0.5");
+            y: 10,
+            duration: 1.2,
+            ease: "power3.out"
+        }, "-=1");
 }
 
 // Menu Interaction

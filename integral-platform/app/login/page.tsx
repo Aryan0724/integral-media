@@ -64,7 +64,7 @@ export default function LoginPage() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 shadow-sm outline-none focus:border-black focus:ring-1 focus:ring-black"
-                                placeholder="admin@integral.labs"
+                                placeholder="admin@integral.media"
                             />
                         </div>
                         <div>

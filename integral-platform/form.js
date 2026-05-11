@@ -167,15 +167,9 @@ async function submitForm() {
             .insert({
                 name: formData.companyName,
                 email: formData.email,
-                // Combine phone if needed or store in a separate column if schema allows.
-                // Schema has: name, email, services_interested (array), status
-                // We will append phone to name or store in metadata if possible. 
-                // Let's strictly follow schema: services_interested is text[]
+                phone: formData.phone,
                 services_interested: formData.services,
                 status: 'new'
-                // Note: phone is not in the original schema I created earlier?
-                // Schema: id, name, email, services_interested, status. 
-                // I'll concatenate Phone to name for now: "Name (Phone: ...)" to avoid errors
             });
 
         if (error) throw error;

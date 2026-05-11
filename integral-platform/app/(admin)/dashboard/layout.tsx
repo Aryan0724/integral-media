@@ -2,7 +2,7 @@ import { Sidebar } from "@/components/admin/Sidebar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Admin Dashboard | Integral Labs",
+    title: "Admin Dashboard | Integral Media",
     description: "Management portal",
     robots: {
         index: false,

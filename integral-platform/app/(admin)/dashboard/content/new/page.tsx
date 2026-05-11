@@ -91,7 +91,7 @@ export default function NewPage() {
                         <div className="sm:col-span-2">
                             <label className="block text-sm font-medium text-gray-700">URL Slug</label>
                             <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-black mt-1">
-                                <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">integral.labs/</span>
+                                <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">integral.media/</span>
                                 <input
                                     type="text"
                                     name="slug"

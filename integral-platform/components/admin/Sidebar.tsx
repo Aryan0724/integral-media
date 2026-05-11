@@ -59,8 +59,8 @@ export function Sidebar() {
         <div className="flex h-screen w-64 flex-col justify-between border-r bg-gray-900 text-white">
             <div className="px-4 py-6">
                 <div className="mb-8 flex items-center gap-2 px-2">
-                    <div className="h-8 w-8 rounded-lg bg-blue-600"></div>
-                    <span className="text-lg font-bold tracking-tight">Integral Admin</span>
+                    <div className="h-8 w-8 rounded-lg bg-white/10 border border-white/20"></div>
+                    <span className="text-lg font-semibold tracking-tighter uppercase">Media OS</span>
                 </div>
 
                 <nav className="space-y-1">
@@ -70,7 +70,7 @@ export function Sidebar() {
                             href={item.href}
                             className={cn(
                                 "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors hover:bg-gray-800",
-                                pathname === item.href ? "bg-gray-800 text-blue-400" : "text-gray-400"
+                                pathname === item.href ? "bg-gray-800 text-white" : "text-gray-400"
                             )}
                         >
                             <item.icon className="h-4 w-4" />

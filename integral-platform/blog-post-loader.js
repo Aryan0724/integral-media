@@ -32,7 +32,7 @@
             if (error || !post) throw new Error('Post not found');
 
             // Render Content
-            document.title = `${post.title} | Integral Labs`;
+            document.title = `${post.title} | Integral Media`;
 
             const container = document.getElementById('post-container');
             if (container) {
@@ -98,13 +98,11 @@
             letter-spacing: 2px;
         }
         .post-title {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             line-height: 1.1;
-            font-weight: 700;
-             /* Gradient Text Effect matching homepage */
-             background: linear-gradient(to right, #fff, #999);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 500;
+            color: #fff;
+            font-family: 'Instrument Sans', sans-serif;
         }
         .post-hero-image {
             width: 100%;

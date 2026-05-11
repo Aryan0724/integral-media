@@ -27,34 +27,56 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 async function middleware(request) {
+    // Default response
     let response = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next({
         request: {
             headers: request.headers
         }
     });
-    const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createServerClient$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["createServerClient"])(("TURBOPACK compile-time value", "https://kboidwzedoztfaxvptlo.supabase.co") || "https://example.supabase.co", ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtib2lkd3plZG96dGZheHZwdGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2ODg4MzIsImV4cCI6MjA4NTI2NDgzMn0.ez_nc1BIoyO548JvmfdAUsaOn4fVTW9CCP6zqhtdnqg") || "key", {
-        cookies: {
-            getAll () {
-                return request.cookies.getAll();
-            },
-            setAll (cookiesToSet) {
-                cookiesToSet.forEach(({ name, value, options })=>request.cookies.set(name, value));
-                response = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next({
-                    request: {
-                        headers: request.headers
+    try {
+        const supabaseUrl = ("TURBOPACK compile-time value", "https://kboidwzedoztfaxvptlo.supabase.co");
+        const supabaseKey = ("TURBOPACK compile-time value", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtib2lkd3plZG96dGZheHZwdGxvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk2ODg4MzIsImV4cCI6MjA4NTI2NDgzMn0.ez_nc1BIoyO548JvmfdAUsaOn4fVTW9CCP6zqhtdnqg");
+        if ("TURBOPACK compile-time truthy", 1) {
+            const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$ssr$2f$dist$2f$module$2f$createServerClient$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["createServerClient"])(supabaseUrl, supabaseKey, {
+                cookies: {
+                    getAll () {
+                        return request.cookies.getAll();
+                    },
+                    setAll (cookiesToSet) {
+                        // Note: request.cookies.set might be restricted in some environments. 
+                        // If it fails, we catch it silently to prevent 500s.
+                        try {
+                            cookiesToSet.forEach(({ name, value, options })=>request.cookies.set(name, value));
+                        } catch (err) {
+                            console.warn("Could not set request cookies:", err);
+                        }
+                        response = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].next({
+                            request: {
+                                headers: request.headers
+                            }
+                        });
+                        cookiesToSet.forEach(({ name, value, options })=>response.cookies.set(name, value, options));
                     }
-                });
-                cookiesToSet.forEach(({ name, value, options })=>response.cookies.set(name, value, options));
+                }
+            });
+            // Check auth
+            const { data: { user }, error } = await supabase.auth.getUser();
+            if (error) {
+            // console.warn("Supabase Auth Error:", error);
+            }
+            // Protected Routes Logic
+            if (request.nextUrl.pathname.startsWith('/dashboard')) {
+                if (!user) {
+                    const redirectUrl = request.nextUrl.clone();
+                    redirectUrl.pathname = '/login';
+                    return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].redirect(redirectUrl);
+                }
             }
         }
-    });
-    const { data: { user } } = await supabase.auth.getUser();
-    if (request.nextUrl.pathname.startsWith('/dashboard')) {
-        if (!user) {
-            const redirectUrl = request.nextUrl.clone();
-            redirectUrl.pathname = '/login';
-            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$server$2f$web$2f$exports$2f$index$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["NextResponse"].redirect(redirectUrl);
-        }
+    } catch (e) {
+        console.error("Middleware Critical Error:", e);
+    // On critical error, allows traffic but might be unauthenticated.
+    // Better than 500 page.
     }
     return response;
 }

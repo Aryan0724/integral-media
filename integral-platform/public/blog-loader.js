@@ -22,7 +22,7 @@
                 .from('blogs')
                 .select('*')
                 .eq('status', 'published')
-                .order('created_at', { ascending: false }); // FIXED: published_at -> created_at
+                .order('created_at', { ascending: false });
 
             if (error) throw error;
 
@@ -36,6 +36,10 @@
             blogs.forEach(blog => {
                 const card = document.createElement('article');
                 card.className = 'blog-card';
+
+                // For now, linking nowhere or to a modal since we don't have dynamic subpages in static HTML yet
+                // Ideally, we'd link to blog-post.html?slug=...
+                // But for MVP, let's just make it a card.
 
                 card.innerHTML = `
                     <div class="blog-thumb">
@@ -53,7 +57,6 @@
 
         } catch (e) {
             console.error('Error loading blogs:', e);
-            container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; color: #666; padding: 4rem;">Error loading articles.</div>';
         }
     }
 
@@ -67,20 +70,22 @@
             padding: 2rem 0;
         }
         .blog-card {
-            background: #fff;
-            border-radius: 4px;
+            background: transparent;
             overflow: hidden;
             transition: transform 0.3s ease;
             display: flex;
             flex-direction: column;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 2rem;
         }
         .blog-card:hover {
-            transform: translateY(-5px);
+            transform: translateX(10px);
         }
         .blog-thumb {
             position: relative;
-            padding-bottom: 60%;
-            background: #f0f0f0;
+            padding-bottom: 50%;
+            background: #111;
+            margin-bottom: 1.5rem;
         }
         .blog-thumb img {
             position: absolute;
@@ -89,42 +94,55 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            filter: grayscale(1);
+            transition: filter 0.3s;
+        }
+        .blog-card:hover .blog-thumb img {
+            filter: grayscale(0);
         }
         .blog-content {
-            padding: 1.5rem 0;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
         .blog-content .date {
-            font-size: 0.8rem;
-            color: #999;
+            font-size: 0.7rem;
+            color: var(--gray, #888);
             margin-bottom: 0.5rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
         .blog-content h3 {
             font-size: 1.5rem;
-            font-weight: 700;
+            font-weight: 500;
             margin-bottom: 0.8rem;
             line-height: 1.2;
-            color: #000;
+            color: #fff;
+            font-family: 'Instrument Sans', sans-serif;
         }
         .blog-content p {
-            font-size: 1rem;
-            color: #555;
+            font-size: 0.95rem;
+            color: var(--gray, #888);
             margin-bottom: 1.5rem;
             line-height: 1.6;
             flex: 1;
         }
         .read-more {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #000;
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #fff;
             text-decoration: none;
-            border-bottom: 1px solid #000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
             align-self: flex-start;
-            padding-bottom: 2px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .read-more:hover {
+            background: #fff;
+            color: #000;
         }
     `;
     document.head.appendChild(style);
