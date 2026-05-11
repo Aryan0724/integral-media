@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Integral Media
+ 
+Results-driven inbound marketing agency specializing in content creation, SEO, and community building.
 
 ## Getting Started
 
