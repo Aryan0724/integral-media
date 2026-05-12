@@ -41,9 +41,9 @@ export function Vision() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="p-8 glass-dark border border-white/5 rounded-sm hover:border-brand-blue/30 transition-all group"
+                  className="p-8 glass-dark border border-white/5 rounded-sm hover:border-brand-yellow/30 transition-all group"
                 >
-                  <point.icon className="w-8 h-8 text-white/20 mb-6 group-hover:text-brand-blue transition-colors" />
+                  <point.icon className="w-8 h-8 text-white/20 mb-6 group-hover:text-brand-yellow transition-colors" />
                   <h4 className="text-xl font-bold mb-4">{point.title}</h4>
                   <p className="text-white/40 text-sm leading-relaxed">{point.desc}</p>
                 </motion.div>
@@ -57,10 +57,10 @@ export function Vision() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-brand-cyan font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Long-Term Vision</div>
+              <div className="text-brand-yellow font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Long-Term Vision</div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight">
                 Building the Future <br />
-                <span className="text-brand-blue">of Influence.</span>
+                <span className="text-brand-orange">of Influence.</span>
               </h2>
               <p className="text-white/50 text-lg mb-10 leading-relaxed">
                 Integral Media is more than a service provider. We are the architects of a 
@@ -71,11 +71,11 @@ export function Vision() {
               
               <div className="flex items-center gap-12 pt-8 border-t border-white/5">
                 <div>
-                  <div className="text-3xl font-black mb-1">2030</div>
+                  <div className="text-3xl font-black mb-1 text-brand-red">2030</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/30 font-bold">Horizon Goal</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-black mb-1">100+</div>
+                  <div className="text-3xl font-black mb-1 text-brand-yellow">100+</div>
                   <div className="text-[10px] uppercase tracking-widest text-white/30 font-bold">System Nodes</div>
                 </div>
               </div>

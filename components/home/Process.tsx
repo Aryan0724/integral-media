@@ -23,7 +23,7 @@ export function Process() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-brand-blue font-bold tracking-[0.4em] uppercase text-[10px] mb-4"
+              className="text-brand-orange font-bold tracking-[0.4em] uppercase text-[10px] mb-4"
             >
               Operational Workflow
             </motion.div>
@@ -56,9 +56,9 @@ export function Process() {
                 className="relative z-10"
               >
                 <div className="group text-center">
-                  <div className="w-16 h-16 rounded-full bg-surface-800 border border-white/10 flex items-center justify-center mx-auto mb-6 group-hover:border-brand-blue group-hover:bg-brand-blue/10 transition-all duration-500 relative">
-                    <step.icon className="w-6 h-6 text-white group-hover:text-brand-blue transition-colors" />
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-white text-black text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-black">
+                  <div className="w-16 h-16 rounded-full bg-surface-800 border border-white/10 flex items-center justify-center mx-auto mb-6 group-hover:border-brand-orange group-hover:bg-brand-orange/10 transition-all duration-500 relative shadow-[0_0_20px_rgba(255,136,0,0)] group-hover:shadow-[0_0_20px_rgba(255,136,0,0.2)]">
+                    <step.icon className="w-6 h-6 text-white group-hover:text-brand-orange transition-colors" />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-brand-orange text-black text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-black">
                       0{i + 1}
                     </div>
                   </div>

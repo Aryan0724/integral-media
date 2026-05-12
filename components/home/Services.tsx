@@ -16,7 +16,7 @@ const services = [
     problem: "Generic content that fades into the noise.",
     solution: "Industrial-grade cinematic production that commands authority.",
     outcome: "95% Higher audience retention and brand prestige.",
-    color: "from-blue-500/20"
+    color: "from-brand-red/30"
   },
   {
     title: "AI Automation",
@@ -24,7 +24,7 @@ const services = [
     problem: "Manual growth workflows that don't scale.",
     solution: "Proprietary AI agents managing content and lead generation.",
     outcome: "10x Operational efficiency with 0 extra headcount.",
-    color: "from-purple-500/20"
+    color: "from-brand-orange/30"
   },
   {
     title: "YouTube Growth",
@@ -32,7 +32,7 @@ const services = [
     problem: "Stagnant channels with low conversion.",
     solution: "Data-driven systems for algorithmic dominance.",
     outcome: "Multi-million view reach with high-intent lead flow.",
-    color: "from-red-500/20"
+    color: "from-brand-yellow/30"
   },
   {
     title: "Performance Marketing",
@@ -40,7 +40,7 @@ const services = [
     problem: "Wasted ad spend on low-intent traffic.",
     solution: "Precision-targeted growth system with real-time optimization.",
     outcome: "Industry-leading ROAS and hyper-targeted scaling.",
-    color: "from-green-500/20"
+    color: "from-brand-red/30"
   },
   {
     title: "SEO Systems",
@@ -48,7 +48,7 @@ const services = [
     problem: "Invisible presence on search engines.",
     solution: "Top-tier domain authority and search ecosystem control.",
     outcome: "Dominating high-intent search queries sustainably.",
-    color: "from-cyan-500/20"
+    color: "from-brand-orange/30"
   },
   {
     title: "Web Intelligence",
@@ -56,7 +56,7 @@ const services = [
     problem: "Slow websites that fail to convert.",
     solution: "High-performance Next.js systems engineered for conversion.",
     outcome: "99+ Lighthouse scores and 40% conversion lift.",
-    color: "from-indigo-500/20"
+    color: "from-brand-yellow/30"
   },
   {
     title: "Branding",
@@ -64,7 +64,7 @@ const services = [
     problem: "Weak identity that fails to project power.",
     solution: "Strategic brand architecture for global market presence.",
     outcome: "Immediate institutional trust and market authority.",
-    color: "from-amber-500/20"
+    color: "from-brand-red/30"
   },
   {
     title: "Content Strategy",
@@ -72,7 +72,7 @@ const services = [
     problem: "Random acts of content with no ROI.",
     solution: "Strategic growth blueprints aligned with business goals.",
     outcome: "Linear relationship between content and revenue.",
-    color: "from-emerald-500/20"
+    color: "from-brand-orange/30"
   }
 ];
 
@@ -85,7 +85,7 @@ export function Services() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-white/40 font-bold tracking-[0.4em] uppercase text-[10px] mb-4"
+            className="text-brand-orange font-bold tracking-[0.4em] uppercase text-[10px] mb-4"
           >
             Tactical Capabilities
           </motion.div>
@@ -97,7 +97,7 @@ export function Services() {
           >
             Growth Systems & Execution.
           </motion.h2>
-          <div className="w-20 h-1 bg-brand-blue mx-auto" />
+          <div className="w-20 h-1 bg-brand-red mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -110,13 +110,13 @@ export function Services() {
               transition={{ delay: i * 0.05 }}
               className="group relative"
             >
-              <div className="h-full glass-dark p-8 rounded-sm border border-white/5 hover:border-white/20 transition-all duration-500 flex flex-col">
+              <div className="h-full glass-dark p-8 rounded-sm border border-white/5 hover:border-brand-orange/20 transition-all duration-500 flex flex-col">
                 <div className={cn(
                   "absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 rounded-sm",
                   service.color
                 )} />
                 
-                <div className="w-12 h-12 rounded-sm bg-white/5 flex items-center justify-center mb-8 group-hover:bg-white group-hover:text-black transition-all">
+                <div className="w-12 h-12 rounded-sm bg-white/5 flex items-center justify-center mb-8 group-hover:bg-brand-orange group-hover:text-white transition-all shadow-[0_0_15px_rgba(255,136,0,0)] group-hover:shadow-[0_0_15px_rgba(255,136,0,0.3)]">
                   <service.icon className="w-6 h-6" />
                 </div>
 
@@ -124,29 +124,29 @@ export function Services() {
 
                 <div className="space-y-4 mb-8 flex-grow">
                   <div className="flex gap-3">
-                    <AlertCircle className="w-4 h-4 text-white/20 flex-shrink-0 mt-1" />
+                    <AlertCircle className="w-4 h-4 text-brand-red/40 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="text-[10px] uppercase tracking-widest text-white/40 mb-1">Problem</div>
+                      <div className="text-[10px] uppercase tracking-widest text-brand-red/60 mb-1">Problem</div>
                       <div className="text-sm text-white/60">{service.problem}</div>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <Zap className="w-4 h-4 text-brand-blue flex-shrink-0 mt-1" />
+                    <Zap className="w-4 h-4 text-brand-orange flex-shrink-0 mt-1" />
                     <div>
-                      <div className="text-[10px] uppercase tracking-widest text-brand-blue/60 mb-1">Solution</div>
+                      <div className="text-[10px] uppercase tracking-widest text-brand-orange/60 mb-1">Solution</div>
                       <div className="text-sm text-white/80">{service.solution}</div>
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-brand-cyan flex-shrink-0 mt-1" />
+                    <CheckCircle2 className="w-4 h-4 text-brand-yellow flex-shrink-0 mt-1" />
                     <div>
-                      <div className="text-[10px] uppercase tracking-widest text-brand-cyan/60 mb-1">Outcome</div>
+                      <div className="text-[10px] uppercase tracking-widest text-brand-yellow/60 mb-1">Outcome</div>
                       <div className="text-sm font-bold text-white">{service.outcome}</div>
                     </div>
                   </div>
                 </div>
 
-                <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest group/btn">
+                <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest group/btn text-brand-orange">
                   Initialize
                   <ArrowUpRight className="w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                 </button>

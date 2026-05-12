@@ -44,19 +44,19 @@ export function Footer() {
               <span className="text-xl font-bold tracking-tighter uppercase">Integral Media</span>
             </Link>
             <p className="text-white/50 max-w-sm mb-8 leading-relaxed">
-              A next-generation media intelligence and growth systems company powering the world's most ambitious brands through precision execution.
+              A next-generation media intelligence and growth systems company powering the world&apos;s most ambitious brands through precision execution.
             </p>
             <div className="flex items-center gap-4">
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-red hover:text-white hover:border-brand-red transition-all">
                 <Twitter className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-all">
                 <Linkedin className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-yellow hover:text-white hover:border-brand-yellow transition-all">
                 <Youtube className="w-4 h-4" />
               </Link>
-              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all">
+              <Link href="#" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-purple hover:text-white hover:border-brand-purple transition-all">
                 <Instagram className="w-4 h-4" />
               </Link>
             </div>
@@ -68,7 +68,7 @@ export function Footer() {
               <ul className="space-y-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-white/40 hover:text-white transition-colors text-sm flex items-center gap-1 group">
+                    <Link href={link.href} className="text-white/40 hover:text-brand-orange transition-colors text-sm flex items-center gap-1 group">
                       {link.name}
                       <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>

@@ -37,10 +37,10 @@ export function Insights() {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-end mb-24">
           <div>
-            <div className="text-brand-cyan font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Intelligence Hub</div>
+            <div className="text-brand-yellow font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Intelligence Hub</div>
             <h2 className="text-4xl md:text-5xl font-bold">Insights & Research.</h2>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/50 hover:text-white transition-colors group">
+          <button className="hidden md:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/50 hover:text-brand-orange transition-colors group">
             All Intelligence
             <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
@@ -56,26 +56,26 @@ export function Insights() {
               transition={{ delay: i * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-sm mb-8">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-sm mb-8 border border-white/5 group-hover:border-brand-orange/30 transition-all">
                 <img 
                   src={article.image} 
                   alt={article.title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 flex items-center gap-2">
-                  <Tag className="w-3 h-3 text-brand-blue" />
+                  <Tag className="w-3 h-3 text-brand-orange" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-white">{article.category}</span>
                 </div>
               </div>
               
-              <h4 className="text-xl font-bold mb-4 group-hover:text-brand-blue transition-colors leading-tight">
+              <h4 className="text-xl font-bold mb-4 group-hover:text-brand-orange transition-colors leading-tight">
                 {article.title}
               </h4>
               <p className="text-white/40 text-sm mb-6 line-clamp-2">{article.desc}</p>
               
               <div className="flex items-center gap-6 pt-6 border-t border-white/5 text-[10px] uppercase tracking-widest font-bold text-white/30">
                 <div className="flex items-center gap-2">
-                  <Clock className="w-3 h-3" />
+                  <Clock className="w-3 h-3 text-brand-yellow" />
                   {article.readTime}
                 </div>
                 <span>{article.date}</span>

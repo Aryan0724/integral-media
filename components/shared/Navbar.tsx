@@ -37,7 +37,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-white flex items-center justify-center rounded-sm group-hover:bg-brand-blue transition-colors">
+          <div className="w-8 h-8 bg-white flex items-center justify-center rounded-sm group-hover:bg-brand-orange transition-colors">
             <span className="text-black font-black text-xl italic">I</span>
           </div>
           <span className="text-lg font-bold tracking-tighter uppercase">Integral Media</span>
@@ -49,14 +49,14 @@ export function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white/70 hover:text-white transition-colors"
+              className="text-sm font-medium text-white/70 hover:text-brand-yellow transition-colors"
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="#contact"
-            className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-white/90 transition-all flex items-center gap-2 group"
+            className="px-5 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-brand-orange hover:text-white transition-all flex items-center gap-2 group"
           >
             Get Started
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

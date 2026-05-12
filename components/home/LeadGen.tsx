@@ -17,7 +17,7 @@ export function LeadGen() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <div className="text-brand-blue font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Initialize Partnership</div>
+                <div className="text-brand-orange font-bold tracking-[0.4em] uppercase text-[10px] mb-6">Initialize Partnership</div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">Ready to Scale?</h2>
                 <p className="text-white/50 text-lg mb-12">
                   We only partner with brands ready for exponential growth. 
@@ -27,7 +27,7 @@ export function LeadGen() {
                 <div className="space-y-8">
                   <div className="flex gap-6 items-center">
                     <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                      <Calendar className="w-5 h-5 text-brand-blue" />
+                      <Calendar className="w-5 h-5 text-brand-red" />
                     </div>
                     <div>
                       <h4 className="font-bold mb-1">Book Strategy Call</h4>
@@ -36,7 +36,7 @@ export function LeadGen() {
                   </div>
                   <div className="flex gap-6 items-center">
                     <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                      <Mail className="w-5 h-5 text-brand-cyan" />
+                      <Mail className="w-5 h-5 text-brand-yellow" />
                     </div>
                     <div>
                       <h4 className="font-bold mb-1">Direct Inquiry</h4>
@@ -56,7 +56,7 @@ export function LeadGen() {
                     <input 
                       type="text" 
                       placeholder="John Wick"
-                      className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
+                      className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition-colors"
                     />
                   </div>
                   <div className="space-y-2">
@@ -64,7 +64,7 @@ export function LeadGen() {
                     <input 
                       type="text" 
                       placeholder="Continental"
-                      className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
+                      className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition-colors"
                     />
                   </div>
                 </div>
@@ -74,13 +74,13 @@ export function LeadGen() {
                   <input 
                     type="email" 
                     placeholder="john@continental.com"
-                    className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors"
+                    className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition-colors"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Systems Required</label>
-                  <select className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors appearance-none">
+                  <select className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition-colors appearance-none">
                     <option>Cinematic Content</option>
                     <option>AI Automation</option>
                     <option>YouTube Growth</option>
@@ -93,11 +93,11 @@ export function LeadGen() {
                   <textarea 
                     rows={4}
                     placeholder="Tell us about your ambition..."
-                    className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-blue transition-colors resize-none"
+                    className="w-full bg-black/40 border border-white/10 rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-brand-orange transition-colors resize-none"
                   />
                 </div>
 
-                <button className="w-full py-4 bg-white text-black font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-brand-blue hover:text-white transition-all flex items-center justify-center gap-2 group">
+                <button className="w-full py-4 bg-white text-black font-bold uppercase tracking-widest text-sm rounded-sm hover:bg-brand-red hover:text-white transition-all flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(255,136,0,0)] hover:shadow-[0_0_20px_rgba(255,51,51,0.3)]">
                   Submit Proposal
                   <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </button>
@@ -115,9 +115,9 @@ export function LeadGen() {
               <input 
                 type="email" 
                 placeholder="Email Address"
-                className="flex-grow bg-black/40 border border-white/10 rounded-sm px-4 py-2 text-sm focus:outline-none focus:border-brand-blue"
+                className="flex-grow bg-black/40 border border-white/10 rounded-sm px-4 py-2 text-sm focus:outline-none focus:border-brand-orange"
               />
-              <button className="px-6 py-2 bg-white text-black font-bold text-sm rounded-sm hover:bg-brand-blue hover:text-white transition-all">
+              <button className="px-6 py-2 bg-white text-black font-bold text-sm rounded-sm hover:bg-brand-orange hover:text-white transition-all">
                 Subscribe
               </button>
             </div>
