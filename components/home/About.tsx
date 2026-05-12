@@ -64,7 +64,7 @@ export function About() {
               Integral Media is the growth systems division of Integral Group. 
               We don't just "create content"—we architect intelligence systems 
               that allow brands to operate with the strategic power of a modern superpower.
-            </p>
+            </motion.p>
             
             <div className="space-y-8">
               {pillars.slice(0, 3).map((pillar, i) => (
